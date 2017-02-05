@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" onclick="AjaxSubmit()" value="Ajax提交">
+<script src="jquery.min.js"></script>
+<script>
+    function AjaxSubmit() {
+        var host = "1.1.1.1";
+        var port = "9999";
+        $.ajax(
+            {
+                url:"/ajax_data/",
+                type:"POST",
+                data:{h:host,p:port},
+                sucess:function (arg) {
+
+                }
+            }
+        );
+    }
+</script>
+</body>
+</html>
