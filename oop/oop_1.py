@@ -129,22 +129,24 @@
 # d = D()
 # d.f1()
 
-class D(object):
-    def bar(self):
-        print('D.bar')
+# class D(object):
+#     def bar(self):
+#         print('D.bar')
+#
+# class C(D):
+#     def bar(self):
+#         print('C.bar')
+#
+# class B(D):
+#     pass
+#
+# class A(B,C):
+#     pass
+#
+# a = A()
+# a.bar()
 
-class C(D):
-    def bar(self):
-        print('C.bar')
 
-class B(D):
-    pass
-
-class A(B,C):
-    pass
-
-a = A()
-a.bar()
 
 
 
