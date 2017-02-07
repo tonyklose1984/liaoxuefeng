@@ -90,15 +90,86 @@
 # print(p.start)
 # print(p.end)
 
-class Foo:
-    def get_bar(self):
-        return 'wupeiqi'
+# class Foo:
+#     def get_bar(self):
+#         return 'wupeiqi'
+#
+#     BAR = property(get_bar)
+#
+# obj = Foo()
+# result = obj.BAR
+# print result
 
-    BAR = property(get_bar)
+#类成员修饰符
+#私有方法
+# class Foo(object):
+#
+#     __country = "China"
+#
+#     def __init__(self):
+#         self.__name = 'alex'
+#     @staticmethod #私有静态方法
+#     def __foo():
+#         print "Foo"
+#
+#     def func(self):
+#         print self.__name
+#         print Foo.__country
+#         #self.__foo()
+#         Foo.__foo()
+#
+# obj = Foo()
+# obj.func()
 
-obj = Foo()
-result = obj.BAR
-print result
+#私有变量 子类也无法拿到
+class Foo(object):
+    __country = "China"
+
+    def func(self):
+        print Foo.__country
+
+class Son(Foo):
+
+    def show(self):
+        print Foo.__country
+
+
+S = Son()
+S.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
